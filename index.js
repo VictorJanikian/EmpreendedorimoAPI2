@@ -10,10 +10,10 @@ app.use(bodyParser.json());
 
 //estabelencendo a conexão
 	const connection = mysql.createConnection({
-	  host     : 'localhost',
+	  host     : 'us-cdbr-iron-east-05.cleardb.net',
 	  port     : 3306,
-	  user     : 'root',
-	  password : 'password'
+	  user     : 'b09e1b52c84fbe',
+	  password : 'c70ff534'
 	});
 
 	connection.connect(function(err){
@@ -84,10 +84,10 @@ console.log('API funcionando!');
 
 function execSQLQuery(sqlQry, res){
   const connection = mysql.createConnection({
-    host     : 'localhost',
+        host     : 'us-cdbr-iron-east-05.cleardb.net',
 	port     : 3306,
-	user     : 'root',
-	password : '8ct8b&r',
+        user     : 'b09e1b52c84fbe',
+        password : 'c70ff534'
 	database : 'vejapormim'
   });
  
