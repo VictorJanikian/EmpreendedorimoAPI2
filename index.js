@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 	  host     : 'localhost',
 	  port     : 3306,
 	  user     : 'root',
-	  password : '8ct8b&r'
+	  password : 'password'
 	});
 
 	connection.connect(function(err){
