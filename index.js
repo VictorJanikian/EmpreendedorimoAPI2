@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 	  host     : 'us-cdbr-iron-east-05.cleardb.net',
 	  port     : 3306,
 	  user     : 'b09e1b52c84fbe',
-	  password : 'c70ff534'
+	  password : 'c70ff534',
 	  database : 'heroku_720dfde834c09a4'
 	});
 
@@ -91,7 +91,7 @@ function execSQLQuery(sqlQry, res){
 		host     : 'us-cdbr-iron-east-05.cleardb.net',
 		port     : 3306,
 		user     : 'b09e1b52c84fbe',
-		password : 'c70ff534'
+		password : 'c70ff534',
 		database : 'heroku_720dfde834c09a4'
     });
  
