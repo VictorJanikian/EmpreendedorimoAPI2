@@ -26,14 +26,14 @@ app.use(bodyParser.json());
 
 	function createDatabase(conn){
 	
-		var databaseSql = "CREATE DATABASE IF NOT EXISTS vejapormim;";  
+		//var databaseSql = "CREATE DATABASE IF NOT EXISTS vejapormim;";  
 		
 		//conn.query(databaseSql, function (error, results, fields){
 		//	if(error) return console.log(error);
 		//	console.log('criou o banco!');
 	//	});
 		
-			databaseSql = "USE heroku_720dfde834c09a4;";  
+			var databaseSql = "USE heroku_720dfde834c09a4;";  
 			conn.query(databaseSql, function (error, results, fields){
 				if(error) return console.log(error);
 				console.log('esta usando o banco!');
@@ -84,6 +84,11 @@ router.post('/Obstacle/insert', (req, res) =>{
 //inicia o servidor
 app.listen(process.env.PORT || 3000); //use port 3000 when testing locally, and the dinamic port assigned by Heroku when testing on this environment.
 console.log('API funcionando!');
+
+//faz uma query a cada 5 segundos pra manter a conexão com o banco ativa 
+setInterval(function () {
+    connection.query('SELECT 1');
+}, 5000);
 
 function execSQLQuery(sqlQry, res){
 	
