@@ -26,11 +26,11 @@ app.use(bodyParser.json());
 
 	function createDatabase(conn){
 	
-		var databaseSql = "CREATE DATABASE IF NOT EXISTS vejapormim;";  
+		//var databaseSql = "CREATE DATABASE IF NOT EXISTS vejapormim;";  
 		
-		conn.query(databaseSql, function (error, results, fields){
-			if(error) return console.log(error);
-			console.log('criou o banco!');
+		//conn.query(databaseSql, function (error, results, fields){
+		//	if(error) return console.log(error);
+		//	console.log('criou o banco!');
 			
 			databaseSql = "USE heroku_720dfde834c09a4;";  
 			conn.query(databaseSql, function (error, results, fields){
