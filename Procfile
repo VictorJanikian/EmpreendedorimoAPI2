@@ -1,1 +1,1 @@
-web: sh run.sh -p $PORT
+web: sh run.sh
