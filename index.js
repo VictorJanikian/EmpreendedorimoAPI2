@@ -82,7 +82,7 @@ router.post('/Obstacle/insert', (req, res) =>{
 	});
 
 //inicia o servidor
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000); //use port 3000 when testing locally, and the dinamic port assigned by Heroku when testing on this environment.
 console.log('API funcionando!');
 
 function execSQLQuery(sqlQry, res){
