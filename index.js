@@ -75,9 +75,12 @@ router.get('/Obstacle/get', (req, res) =>{
 })
 
 router.post('/Obstacle/insert', (req, res) =>{
-    const latitude = req.body.lat.substring(0,15);
-    const longitude = req.body.lng.substring(0,15);
-	const tipo = req.body.type.substring(0,15);
+    //const latitude = req.body.lat.substring(0,15);
+    //const longitude = req.body.lng.substring(0,15);
+	//const tipo = req.body.type.substring(0,15);
+	const latitude = req.body.lat;
+    const longitude = req.body.lng;
+	const tipo = req.body.type;
     execSQLQuery(`INSERT INTO Obstaculos(Latitude, Longitude, Type) VALUES('${latitude}','${longitude}', "${tipo}")`, res);
 	});
 
