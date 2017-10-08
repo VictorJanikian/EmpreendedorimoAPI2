@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //estabelencendo a conexão
+	
 	const connection = mysql.createConnection({
 	  host     : 'us-cdbr-iron-east-05.cleardb.net',
 	  port     : 3306,
@@ -30,7 +31,7 @@ app.use(bodyParser.json());
 			if(error) return console.log(error);
 			console.log('criou o banco!');
 			
-			databaseSql = "USE vejapormim;";  
+			databaseSql = "USE heroku_720dfde834c09a4;";  
 			conn.query(databaseSql, function (error, results, fields){
 				if(error) return console.log(error);
 				console.log('esta usando o banco!');
@@ -83,13 +84,15 @@ app.listen(port);
 console.log('API funcionando!');
 
 function execSQLQuery(sqlQry, res){
-  const connection = mysql.createConnection({
-        host     : 'us-cdbr-iron-east-05.cleardb.net',
-	port     : 3306,
-        user     : 'b09e1b52c84fbe',
-        password : 'c70ff534'
-	database : 'vejapormim'
-  });
+	
+
+	const connection = mysql.createConnection({
+		host     : 'us-cdbr-iron-east-05.cleardb.net',
+		port     : 3306,
+		user     : 'b09e1b52c84fbe',
+		password : 'c70ff534'
+		database : 'heroku_720dfde834c09a4'
+    });
  
   connection.query(sqlQry, function(error, results, fields){
       if(error) 
