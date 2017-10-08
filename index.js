@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 	
 	const connection = mysql.createConnection({
 	  host     : 'us-cdbr-iron-east-05.cleardb.net',
-	  port     : 3306,
+	  port     : 3305,
 	  user     : 'b09e1b52c84fbe',
 	  password : 'c70ff534'
 	});
@@ -88,7 +88,7 @@ function execSQLQuery(sqlQry, res){
 
 	const connection = mysql.createConnection({
 		host     : 'us-cdbr-iron-east-05.cleardb.net',
-		port     : 3306,
+		port     : 3305,
 		user     : 'b09e1b52c84fbe',
 		password : 'c70ff534'
 		database : 'heroku_720dfde834c09a4'
