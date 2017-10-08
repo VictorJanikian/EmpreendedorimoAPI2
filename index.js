@@ -15,6 +15,7 @@ app.use(bodyParser.json());
 	  port     : 3306,
 	  user     : 'b09e1b52c84fbe',
 	  password : 'c70ff534'
+	  database : 'heroku_720dfde834c09a4'
 	});
 
 	connection.connect(function(err){
