@@ -82,7 +82,7 @@ router.post('/Obstacle/insert', (req, res) =>{
 	});
 
 //inicia o servidor
-app.listen(port);
+app.listen(process.env.PORT || 3000);
 console.log('API funcionando!');
 
 function execSQLQuery(sqlQry, res){
