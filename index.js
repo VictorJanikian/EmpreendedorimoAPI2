@@ -49,8 +49,8 @@ app.use(bodyParser.json());
 	var tableSql = "CREATE TABLE IF NOT EXISTS Obstaculos (\n"+
 	   			  "ID int NOT NULL AUTO_INCREMENT,\n"+
 				  "Type varchar(150) NOT NULL,\n"+
-				  "Latitude DECIMAL(10,10) NOT NULL,\n"+
-				  "Longitude DECIMAL(10,10) NOT NULL,\n"+
+				  "Latitude DECIMAL(10,5) NOT NULL,\n"+
+				  "Longitude DECIMAL(10,5) NOT NULL,\n"+
 				  "PRIMARY KEY (ID)\n"+
 				  ");";
 					  
